@@ -37,7 +37,7 @@ describe(('You are awesome, aren\'t you?'), () => {
 
     object[property] = propertyValue;
 
-    assert.equal(Object.keys(object).length, 0);
+    assert.equal(Object.keys(object), 0);
     assert.equal(object[property], propertyValue);
   });
 
@@ -105,7 +105,7 @@ describe(('You are awesome, aren\'t you?'), () => {
       if (check === param) {
         clearInterval(intervalId);
         if (delta < 1000 || delta > 1500) {
-          assert.equal(true, false);
+          assert.equal(delta, false);
         } else {
           assert.equal(true, true);
         }
